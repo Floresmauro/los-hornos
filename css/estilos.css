@@ -359,17 +359,17 @@ html, body {
 /* ============================= */
 .categorias-sticky {
   position: sticky;
-  top: 0;
+  top: 80px;
   background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(4px);
   padding: 16px 20px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+  flex-wrap: nowrap;
   overflow-x: auto;
-  border-bottom: 1px solid #555;
-  z-index: 1000;
+  gap: 12px;
+  z-index: 999;
 }
+
 
 .categorias-sticky a {
   background: var(--rojo);
@@ -392,11 +392,12 @@ html, body {
 }
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
   padding: 40px 30px;
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
 }
 
 
@@ -416,10 +417,10 @@ html, body {
 }
 
 .card h3 {
-  margin-bottom: 8px;
-  font-size: 1.2rem;
   color: var(--rojo);
+  text-align: center;
 }
+
 
 .card p {
   font-size: 0.95rem;
@@ -441,11 +442,6 @@ html, body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
-.card h3 {
-  margin-bottom: 8px;
-  font-size: 1.2rem;
-  color: var(--rojo);
-}
 
 .card p {
   font-size: 0.95rem;
@@ -467,6 +463,14 @@ html, body {
   background-color: #1ebe5d;
   transform: scale(1.05);
 }
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
 
 .titulo-seccion {
   text-align: center;
@@ -645,3 +649,11 @@ html, body {
 }
 
 
+body {
+  overflow-x: hidden;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
