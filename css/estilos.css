@@ -624,5 +624,24 @@ html, body {
   color: #ff4c4c;
   text-decoration: underline;
 }
+/* ============================= */
+/* ICONOS REDES SOCIALES        */
+/* ============================= */
+.redes {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.redes a img {
+  height: 32px;
+  width: 32px;
+  transition: transform 0.2s ease;
+}
+
+.redes a img:hover {
+  transform: scale(1.1);
+}
 
 
